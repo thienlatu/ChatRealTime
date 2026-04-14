@@ -1,0 +1,218 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\monCoVan\\APIChatRealTime\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|d:\\moncovan\\apichatrealtime\\apichatrealtime\\models\\chatrealtimecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|solutionrelative:apichatrealtime\\models\\chatrealtimecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|d:\\moncovan\\apichatrealtime\\apichatrealtime\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|solutionrelative:apichatrealtime\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|d:\\moncovan\\apichatrealtime\\apichatrealtime\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|solutionrelative:apichatrealtime\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|d:\\moncovan\\apichatrealtime\\apichatrealtime\\dto\\nguoidungdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|solutionrelative:apichatrealtime\\dto\\nguoidungdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|d:\\moncovan\\apichatrealtime\\apichatrealtime\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|solutionrelative:apichatrealtime\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|d:\\moncovan\\apichatrealtime\\apichatrealtime\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|solutionrelative:apichatrealtime\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|d:\\moncovan\\apichatrealtime\\apichatrealtime\\dto\\updateprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|solutionrelative:apichatrealtime\\dto\\updateprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|d:\\moncovan\\apichatrealtime\\apichatrealtime\\dto\\tinnhandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|solutionrelative:apichatrealtime\\dto\\tinnhandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|d:\\moncovan\\apichatrealtime\\apichatrealtime\\service\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|solutionrelative:apichatrealtime\\service\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|d:\\moncovan\\apichatrealtime\\apichatrealtime\\models\\tinnhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|solutionrelative:apichatrealtime\\models\\tinnhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|d:\\moncovan\\apichatrealtime\\apichatrealtime\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{446B3442-69D2-49A7-87F8-7F204DB4E30B}|APIChatRealTime\\APIChatRealTime.csproj|solutionrelative:apichatrealtime\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 100,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "APIChatRealTime\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\Controllers\\UserController.cs",
+              "RelativeToolTip": "APIChatRealTime\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAYwJ8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T03:52:33.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdateProfileDto.cs",
+              "DocumentMoniker": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\DTO\\UpdateProfileDto.cs",
+              "RelativeDocumentMoniker": "APIChatRealTime\\DTO\\UpdateProfileDto.cs",
+              "ToolTip": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\DTO\\UpdateProfileDto.cs",
+              "RelativeToolTip": "APIChatRealTime\\DTO\\UpdateProfileDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T03:50:48.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NguoiDungDto.cs",
+              "DocumentMoniker": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\DTO\\NguoiDungDto.cs",
+              "RelativeDocumentMoniker": "APIChatRealTime\\DTO\\NguoiDungDto.cs",
+              "ToolTip": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\DTO\\NguoiDungDto.cs",
+              "RelativeToolTip": "APIChatRealTime\\DTO\\NguoiDungDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T03:48:45.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TinNhanDto.cs",
+              "DocumentMoniker": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\DTO\\TinNhanDto.cs",
+              "RelativeDocumentMoniker": "APIChatRealTime\\DTO\\TinNhanDto.cs",
+              "ToolTip": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\DTO\\TinNhanDto.cs",
+              "RelativeToolTip": "APIChatRealTime\\DTO\\TinNhanDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T03:43:36.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TinNhan.cs",
+              "DocumentMoniker": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\Models\\TinNhan.cs",
+              "RelativeDocumentMoniker": "APIChatRealTime\\Models\\TinNhan.cs",
+              "ToolTip": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\Models\\TinNhan.cs",
+              "RelativeToolTip": "APIChatRealTime\\Models\\TinNhan.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T03:39:44.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChatRealTimeContext.cs",
+              "DocumentMoniker": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\Models\\ChatRealTimeContext.cs",
+              "RelativeDocumentMoniker": "APIChatRealTime\\Models\\ChatRealTimeContext.cs",
+              "ToolTip": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\Models\\ChatRealTimeContext.cs",
+              "RelativeToolTip": "APIChatRealTime\\Models\\ChatRealTimeContext.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAawBwAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T03:37:50.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\Service\\ChatHub.cs",
+              "RelativeDocumentMoniker": "APIChatRealTime\\Service\\ChatHub.cs",
+              "ToolTip": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\Service\\ChatHub.cs",
+              "RelativeToolTip": "APIChatRealTime\\Service\\ChatHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T03:24:28.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "APIChatRealTime\\Controllers\\ChatController.cs",
+              "ToolTip": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "APIChatRealTime\\Controllers\\ChatController.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAuwFMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T03:23:08.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "APIChatRealTime\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "APIChatRealTime\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T03:13:35.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\appsettings.json",
+              "RelativeDocumentMoniker": "APIChatRealTime\\appsettings.json",
+              "ToolTip": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\appsettings.json",
+              "RelativeToolTip": "APIChatRealTime\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-08T03:12:28.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\Program.cs",
+              "RelativeDocumentMoniker": "APIChatRealTime\\Program.cs",
+              "ToolTip": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\Program.cs",
+              "RelativeToolTip": "APIChatRealTime\\Program.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAYwCkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T03:06:42.365Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

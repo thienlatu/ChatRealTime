@@ -1,0 +1,265 @@
+[
+  {
+    "ContainingType": "APIChatRealTime.Controllers.ChatController",
+    "Method": "GetChatHistory",
+    "RelativePath": "api/Chat/{phongChatId}/history",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phongChatId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "skip",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "take",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.ChatController",
+    "Method": "GetDanhSachPhong",
+    "RelativePath": "api/Chat/danh-sach-phong/{nguoiDungId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nguoiDungId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.ChatController",
+    "Method": "SendImage",
+    "RelativePath": "api/Chat/send-image",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phongChatId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "nguoiGuiId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.ChatController",
+    "Method": "SendText",
+    "RelativePath": "api/Chat/send-text",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "APIChatRealTime.DTO.SendTextDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.ChatController",
+    "Method": "TaoNhom",
+    "RelativePath": "api/Chat/tao-nhom",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ten",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "nguoiTaoId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "memberIds",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.ChatController",
+    "Method": "TaoHoacLayPhong11",
+    "RelativePath": "api/Chat/tao-phong-1-1",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "APIChatRealTime.Controllers.ChatController\u002BTaoPhong11Dto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.UserController",
+    "Method": "GetProfile",
+    "RelativePath": "api/User/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.UserController",
+    "Method": "CapNhatHoSo",
+    "RelativePath": "api/User/cap-nhat-ho-so",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "ten",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.UserController",
+    "Method": "DangKy",
+    "RelativePath": "api/User/dang-ky",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "APIChatRealTime.DTO.DangKyDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.UserController",
+    "Method": "DangNhap",
+    "RelativePath": "api/User/dang-nhap",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "APIChatRealTime.DTO.DangNhapDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.UserController",
+    "Method": "LayThongTinUsers",
+    "RelativePath": "api/User/lay-thong-tin-users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "APIChatRealTime.Controllers.UserController\u002BLayUsersDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.UserController",
+    "Method": "TimKiem",
+    "RelativePath": "api/User/tim-kiem",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tuKhoa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "nguoiGoiId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[APIChatRealTime.WeatherForecast, APIChatRealTime, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]
