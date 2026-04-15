@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LItBRHIR5uw=",
+  "dgSpecHash": "Tyh1dX8VqrE=",
   "success": true,
-  "projectFilePath": "D:\\monCoVan\\APIChatRealTime\\APIChatRealTime\\APIChatRealTime.csproj",
+  "projectFilePath": "D:\\monCoVan\\chatApp\\APIChatRealTime\\APIChatRealTime\\APIChatRealTime.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TUF GAMING\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\TUF GAMING\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

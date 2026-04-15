@@ -25,4 +25,7 @@ export interface ChatInbox {
   time: string;
   unread: number;
   avatar: string;
+  dangOnline?: boolean;
+  lanCuoiOnline?: string;
+  laNhom?: boolean;
 }

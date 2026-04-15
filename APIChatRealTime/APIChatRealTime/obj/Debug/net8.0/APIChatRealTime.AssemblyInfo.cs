@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APIChatRealTime")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd2e11a260cf0b55e883a2c79059b6e6f80bac6b")]
 [assembly: System.Reflection.AssemblyProductAttribute("APIChatRealTime")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APIChatRealTime")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,34 +1,93 @@
 [
   {
-    "ContainingType": "APIChatRealTime.Controllers.ChatController",
-    "Method": "GetChatHistory",
-    "RelativePath": "api/Chat/{phongChatId}/history",
+    "ContainingType": "APIChatRealTime.Controllers.MessageController",
+    "Method": "GetMessages",
+    "RelativePath": "api/Message/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "phongChatId",
+        "Name": "id",
         "Type": "System.Guid",
         "IsRequired": true
-      },
-      {
-        "Name": "skip",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "take",
-        "Type": "System.Int32",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "APIChatRealTime.Controllers.ChatController",
-    "Method": "GetDanhSachPhong",
-    "RelativePath": "api/Chat/danh-sach-phong/{nguoiDungId}",
+    "ContainingType": "APIChatRealTime.Controllers.MessageController",
+    "Method": "addUserToRoom",
+    "RelativePath": "api/Message/add-user",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addUserToRoomRequest",
+        "Type": "APIChatRealTime.DTO.Room.AddMemberRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.MessageController",
+    "Method": "GetAllMessages",
+    "RelativePath": "api/Message/all/{roomId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roomId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.MessageController",
+    "Method": "createRoom",
+    "RelativePath": "api/Message/create-room",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createRoomRequest",
+        "Type": "APIChatRealTime.DTO.Room.CreateRoomRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.MessageController",
+    "Method": "GetPrivateRoom",
+    "RelativePath": "api/Message/get-private-room/{partnerId}/{currentUserId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "partnerId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "currentUserId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.MessageController",
+    "Method": "GetInbox",
+    "RelativePath": "api/Message/inbox/{nguoiDungId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -42,188 +101,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "APIChatRealTime.Controllers.ChatController",
-    "Method": "SendImage",
-    "RelativePath": "api/Chat/send-image",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "phongChatId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "nguoiGuiId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "file",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "APIChatRealTime.Controllers.ChatController",
-    "Method": "SendText",
-    "RelativePath": "api/Chat/send-text",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "APIChatRealTime.DTO.SendTextDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "APIChatRealTime.Controllers.ChatController",
-    "Method": "TaoNhom",
-    "RelativePath": "api/Chat/tao-nhom",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "ten",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "nguoiTaoId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "memberIds",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "file",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "APIChatRealTime.Controllers.ChatController",
-    "Method": "TaoHoacLayPhong11",
-    "RelativePath": "api/Chat/tao-phong-1-1",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "APIChatRealTime.Controllers.ChatController\u002BTaoPhong11Dto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "APIChatRealTime.Controllers.UserController",
-    "Method": "GetProfile",
-    "RelativePath": "api/User/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "APIChatRealTime.Controllers.UserController",
-    "Method": "CapNhatHoSo",
-    "RelativePath": "api/User/cap-nhat-ho-so",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "ten",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "file",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "APIChatRealTime.Controllers.UserController",
-    "Method": "DangKy",
-    "RelativePath": "api/User/dang-ky",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "APIChatRealTime.DTO.DangKyDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "APIChatRealTime.Controllers.UserController",
-    "Method": "DangNhap",
-    "RelativePath": "api/User/dang-nhap",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "APIChatRealTime.DTO.DangNhapDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "APIChatRealTime.Controllers.UserController",
-    "Method": "LayThongTinUsers",
-    "RelativePath": "api/User/lay-thong-tin-users",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "APIChatRealTime.Controllers.UserController\u002BLayUsersDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "APIChatRealTime.Controllers.UserController",
-    "Method": "TimKiem",
-    "RelativePath": "api/User/tim-kiem",
+    "ContainingType": "APIChatRealTime.Controllers.MessageController",
+    "Method": "SearchUsers",
+    "RelativePath": "api/Message/search-users",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -237,6 +117,107 @@
         "Name": "nguoiGoiId",
         "Type": "System.Guid",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.MessageController",
+    "Method": "SendMessage",
+    "RelativePath": "api/Message/send",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chatRequest",
+        "Type": "APIChatRealTime.DTO.Chat.ChatRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.OAuthController",
+    "Method": "Login",
+    "RelativePath": "api/OAuth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "APIChatRealTime.DTO.OAuth.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.OAuthController",
+    "Method": "Register",
+    "RelativePath": "api/OAuth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "APIChatRealTime.DTO.OAuth.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.OAuthController",
+    "Method": "SearchUsers",
+    "RelativePath": "api/OAuth/search-users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tuKhoa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "nguoiGoiId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.OAuthController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/OAuth/update-profile",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "APIChatRealTime.DTO.OAuth.ProfileRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIChatRealTime.Controllers.OAuthController",
+    "Method": "UsersByIds",
+    "RelativePath": "api/OAuth/users-by-ids",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "body",
+        "Type": "APIChatRealTime.DTO.OAuth.UsersByIdsRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

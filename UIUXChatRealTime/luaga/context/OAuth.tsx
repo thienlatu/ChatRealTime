@@ -1,34 +1,44 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import { useRouter, useSegments, useRootNavigationState } from 'expo-router';
+import { NguoiDungDto } from '../Type';
 
 interface AuthContextType {
-  user: any; 
-  login: (userData: any) => void;
+  user: NguoiDungDto | null; 
+  login: (userData: NguoiDungDto) => void;
   logout: () => void;
 }
 
 const AuthContext = createContext<AuthContextType>({} as AuthContextType);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<NguoiDungDto | null>(null);
   const segments = useSegments();
   const router = useRouter();
-  const rootNavigationState = useRootNavigationState();
+  
+  const navigationState = useRootNavigationState();
+  const [isMounted, setIsMounted] = useState<boolean>(false);
 
   useEffect(() => {
-    // Chốt chặn kim cương: Phải đảm bảo Root Layout đã Mount xong xuôi (có key)
-    if (!rootNavigationState?.key) return;
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted || !navigationState?.key) return;
 
     const inAuthGroup = segments[0] === 'Login' || segments[0] === 'Regiter';
     
-    if (!user && !inAuthGroup) {
-      router.replace('/Login');
-    } else if (user && inAuthGroup) {
-      router.replace('/');
-    }
-  }, [user, segments, rootNavigationState?.key]); // Theo dõi đúng cái key của Root
+    const timer = setTimeout(() => {
+      if (!user && !inAuthGroup) {
+        router.replace('/Login');
+      } else if (user && inAuthGroup) {
+        router.replace('/');
+      }
+    }, 10);
 
-  const login = (userData: any) => setUser(userData);
+    return () => clearTimeout(timer);
+  }, [user, segments, isMounted, navigationState?.key]);
+
+  const login = (userData: NguoiDungDto) => setUser(userData);
   const logout = () => setUser(null);
 
   return (

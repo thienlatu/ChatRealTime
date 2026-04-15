@@ -3,38 +3,32 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, KeyboardAvoidingVi
 import { Link } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useAuth } from '../context/OAuth';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
+import { NguoiDungDto } from '../Type';
 
 export default function LoginScreen() {
   const { login } = useAuth();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleLogin = async () => {
-    if (!email || !password) {
-      Alert.alert('Lỗi', 'Vui lòng nhập đủ email và mật khẩu!');
-      return;
-    }
+    if (!email || !password) return Alert.alert('Lỗi', 'Vui lòng nhập đủ email và mật khẩu!');
 
     setIsLoading(true);
     try {
-      const response = await axios.post(
-        'https://ungentlemanlike-aspen-electronically.ngrok-free.dev/api/User/dang-nhap', 
-        {
-          email: email,
-          matKhau: password
-        },
-        {
-          headers: { 'ngrok-skip-browser-warning': 'true' }
-        }
+      // 🚀 GỌI ĐÚNG API OAUTH
+      const res = await axios.post<NguoiDungDto>(
+        'https://ungentlemanlike-aspen-electronically.ngrok-free.dev/api/OAuth/login', 
+        { email, matKhau: password }
       );
       
-      if (response.data && response.data.user) {
-        login(response.data.user);
+      if (res.data) {
+        login(res.data); // API trả về thẳng Object User
       }
-    } catch (error: any) {
-      Alert.alert('Đăng nhập thất bại', error.response?.data || 'Sai thông tin hoặc tài khoản bị khóa.');
+    } catch (error) {
+      const e = error as AxiosError<{ message?: string }>;
+      Alert.alert('Đăng nhập thất bại', e.response?.data?.message || 'Sai thông tin.');
     } finally {
       setIsLoading(false);
     }
@@ -47,22 +41,18 @@ export default function LoginScreen() {
         <Text style={styles.title}>LUXURY CHAT</Text>
         <Text style={styles.subtitle}>Đẳng cấp kết nối</Text>
       </View>
-
       <View style={styles.form}>
         <View style={styles.inputGroup}>
           <Ionicons name="mail-outline" size={20} color="#888" style={styles.icon} />
           <TextInput style={styles.input} placeholder="Email" placeholderTextColor="#888" value={email} onChangeText={setEmail} autoCapitalize="none" />
         </View>
-
         <View style={styles.inputGroup}>
           <Ionicons name="lock-closed-outline" size={20} color="#888" style={styles.icon} />
           <TextInput style={styles.input} placeholder="Mật khẩu" placeholderTextColor="#888" secureTextEntry value={password} onChangeText={setPassword} />
         </View>
-
         <TouchableOpacity style={styles.loginBtn} onPress={handleLogin} disabled={isLoading}>
           <Text style={styles.loginBtnText}>{isLoading ? 'ĐANG XỬ LÝ...' : 'ĐĂNG NHẬP'}</Text>
         </TouchableOpacity>
-
         <View style={styles.registerContainer}>
           <Text style={styles.registerText}>Chưa có tài khoản? </Text>
           <Link href="/Regiter" asChild>
@@ -74,6 +64,7 @@ export default function LoginScreen() {
   );
 }
 
+// (Giữ nguyên StyleSheet dưới này)
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#121212', justifyContent: 'center', padding: 30 },
   logoContainer: { alignItems: 'center', marginBottom: 50 },

@@ -3,77 +3,46 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, KeyboardAvo
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import { useAuth } from '../context/OAuth';
 
 export default function ProfileScreen() {
   const router = useRouter();
   const { user, logout, login } = useAuth(); 
   
-  const [name, setName] = useState(user?.ten || 'La Tu Thien');
-  const [avatar, setAvatar] = useState(user?.anhDaiDien || 'https://ui-avatars.com/api/?name=Thien&background=D4AF37&color=fff');
-  const [isLoading, setIsLoading] = useState(false);
+  const [name, setName] = useState<string>(user?.ten || '');
+  const [avatar, setAvatar] = useState<string>(user?.anhDaiDien || 'https://ui-avatars.com/api/?name=U');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const pickAvatar = async () => {
-    let result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
-      allowsEditing: true,
-      aspect: [1, 1], 
-      quality: 0.5,
+    let result = await ImagePicker.launchImageLibraryAsync({ 
+      mediaTypes: ImagePicker.MediaTypeOptions.Images, allowsEditing: true, aspect: [1, 1], quality: 0.5, base64: true 
     });
-
-    if (!result.canceled) {
-      setAvatar(result.assets[0].uri);
+    if (!result.canceled && result.assets[0].base64) {
+      setAvatar(`data:image/jpeg;base64,${result.assets[0].base64}`);
     }
   };
 
   const handleSave = async () => {
-    if (!name.trim()) {
-      Alert.alert('Lỗi', 'Tên không được để trống!');
-      return;
-    }
-    
+    if (!name.trim()) return;
     setIsLoading(true);
     try {
-      const formData = new FormData();
-      formData.append('id', user?.id || '');
-      formData.append('ten', name);
-      
-      if (avatar && !avatar.startsWith('https://')) {
-        formData.append('file', {
-          uri: Platform.OS === 'ios' ? avatar.replace('file://', '') : avatar,
-          name: 'avatar.jpg',
-          type: 'image/jpeg',
-        } as any);
-      }
-      
-      const response = await axios.post(
-        'https://ungentlemanlike-aspen-electronically.ngrok-free.dev/api/User/cap-nhat-ho-so',
-        formData,
-        { 
-          headers: { 
-            'Content-Type': 'multipart/form-data',
-            'ngrok-skip-browser-warning': 'true' 
-          } 
-        }
+      // 🚀 PUT LÊN API OAUTH BẰNG JSON BODY
+      const response = await axios.put(
+        'https://ungentlemanlike-aspen-electronically.ngrok-free.dev/api/OAuth/update-profile',
+        { id: user?.id, ten: name, anhDaiDien: avatar }
       );
       
       if (response.data) {
-        login(response.data);
-        Alert.alert('Thành công', 'Cập nhật hồ sơ thành công!');
+        login({ ...user, ...response.data });
+        Alert.alert('Thành công', 'Cập nhật thành công!');
         router.back();
       }
-    } catch (error: any) {
-      Alert.alert('Lỗi', error.response?.data || 'Cập nhật hồ sơ thất bại!');
-    } finally {
-      setIsLoading(false);
-    }
+    } catch (error) { Alert.alert('Lỗi', 'Cập nhật hồ sơ thất bại!'); } 
+    finally { setIsLoading(false); }
   };
 
-  const handleLogout = () => {
-    logout();
-    router.replace('/Login');
-  };
+  const handleLogout = () => { logout(); router.replace('/Login'); };
 
   return (
     <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={styles.container}>
@@ -82,34 +51,19 @@ export default function ProfileScreen() {
         <Text style={styles.headerTitle}>Hồ sơ của tôi</Text>
         <TouchableOpacity onPress={handleLogout}><Ionicons name="log-out-outline" size={28} color="#FF3B30" /></TouchableOpacity>
       </View>
-
       <View style={styles.body}>
         <TouchableOpacity style={styles.avatarContainer} onPress={pickAvatar}>
           <Image source={{ uri: avatar }} style={styles.avatar} />
-          <View style={styles.cameraIcon}>
-            <Ionicons name="camera" size={20} color="#000" />
-          </View>
+          <View style={styles.cameraIcon}><Ionicons name="camera" size={20} color="#000" /></View>
         </TouchableOpacity>
-
         <View style={styles.inputGroup}>
           <Text style={styles.label}>Tên hiển thị</Text>
-          <TextInput 
-            style={styles.input} 
-            value={name}
-            onChangeText={setName}
-            placeholderTextColor="#888"
-          />
+          <TextInput style={styles.input} value={name} onChangeText={setName} placeholderTextColor="#888" />
         </View>
-
         <View style={styles.inputGroup}>
           <Text style={styles.label}>Email</Text>
-          <TextInput 
-            style={[styles.input, { color: '#888', backgroundColor: '#111' }]} 
-            value={user?.email || ''}
-            editable={false}
-          />
+          <TextInput style={[styles.input, { color: '#888', backgroundColor: '#111' }]} value={user?.email || ''} editable={false} />
         </View>
-
         <TouchableOpacity style={styles.saveBtn} onPress={handleSave} disabled={isLoading}>
           <Text style={styles.saveBtnText}>{isLoading ? 'ĐANG LƯU...' : 'LƯU THAY ĐỔI'}</Text>
         </TouchableOpacity>
